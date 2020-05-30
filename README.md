@@ -11,23 +11,33 @@ fork from [react-social-icons](https://github.com/jaketrent/react-social-icons)
 ```bash
 npm install --save react-icons-context
 ```
+```bash
+yarn install react-icons-context
+```
 
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React from 'react';
 
-import MyComponent from 'react-icons-context'
-import 'react-icons-context/dist/index.css'
+import {
+	ReactIconsContext,
+	defaultIcons,
+	SocialIcon,
+} from 'react-icons-context';
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+const App = () => {
+	return (
+		<ReactIconsContext.Provider value={defaultIcons}>
+			<SocialIcon network="facebook" />
+			<SocialIcon url="https://github.com/MohammedFaragallah" />
+		</ReactIconsContext.Provider>
+	);
+};
 ```
 
 ## License
 
 MIT © [MohammedFaragallah](https://github.com/MohammedFaragallah)
+
 # react-icons-context
