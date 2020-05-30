@@ -10,7 +10,7 @@ import {
 const App = () => {
 	return (
 		<ReactIconsContext.Provider value={defaultIcons}>
-			<CssBaseline></CssBaseline>
+			<CssBaseline />
 			<Box
 				width={'100vw'}
 				height={'100vh'}
@@ -18,9 +18,9 @@ const App = () => {
 				justifyContent={'center'}
 				alignItems={'center'}
 			>
-				{['twitter', 'facebook', 'instagram'].map((network) => (
+				{Object.keys(defaultIcons).map((network) => (
 					<Box mr={2}>
-						<SocialIcon network={network}></SocialIcon>
+						<SocialIcon network={network} title={network} />
 					</Box>
 				))}
 			</Box>
