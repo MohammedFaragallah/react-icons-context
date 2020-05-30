@@ -1,27 +1,28 @@
 {
   "name": "react-icons-context-example",
-  "homepage": "https://MohammedFaragallah.github.io/react-icons-context",
   "version": "0.0.0",
   "private": true,
-  "dependencies": {
-    "react": "link:../node_modules/react",
-    "react-dom": "link:../node_modules/react-dom",
-    "react-scripts": "link:../node_modules/react-scripts",
-    "react-icons-context": "link:.."
-  },
+  "homepage": "https://MohammedFaragallah.github.io/react-icons-context",
   "scripts": {
-    "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
     "build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
-    "test": "node ../node_modules/react-scripts/bin/react-scripts.js test",
-    "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject",
+    "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
+    "test": "node ../node_modules/react-scripts/bin/react-scripts.js test"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.10.0",
+    "react": "link:../node_modules/react",
+    "react-dom": "link:../node_modules/react-dom",
+    "react-icons-context": "link:..",
+    "react-scripts": "link:../node_modules/react-scripts"
+  }
 }
