@@ -2,7 +2,7 @@
   "name": "react-icons-context",
   "version": "1.0.0",
   "description": "icons provider for react projects",
-  "repository": "MohammedFaragallah/react-icons-context",
+  "repository": "https://github.com/MohammedFaragallah/react-icons-context",
   "license": "MIT",
   "author": "MohammedFaragallah",
   "main": "dist/index.js",
@@ -17,6 +17,7 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
     "prepublish": "run-s build",
+    "release": "release-it",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
@@ -34,6 +35,11 @@
       "prettier --config .prettierrc --write",
       "git add"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "resolutions": {
     "eslint-plugin-import": "2.20.1"
@@ -70,17 +76,13 @@
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.1",
+    "release-it": "^13.6.1"
   },
   "peerDependencies": {
     "react": "^16.13.1"
   },
   "engines": {
     "node": ">=10"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
