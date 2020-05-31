@@ -1,4 +1,5 @@
 import { CSSProperties, SVGAttributes } from 'react';
+import { LinkProps } from '@material-ui/core';
 
 export type Color = SVGAttributes<'g'>['fill'];
 export type Path = SVGAttributes<'path'>['d'];
@@ -22,8 +23,7 @@ export interface Options {
 	width?: CSSProperties['width'];
 }
 
-// TODO: extends root component props Link|span
-export interface SocialIconProps extends Options {
+export interface SocialIconProps extends Options, LinkProps {
 	bgColor?: Color;
 	fgColor?: Color;
 	label?: string;

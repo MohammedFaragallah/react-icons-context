@@ -27,8 +27,6 @@ export const SocialIcon: React.FC<SocialIconProps> = (props) => {
 
 	const networkKey = network || (url ? keyFor(url) : DEFAULT_KEY);
 
-	const Component = url ? Link : 'span';
-
 	return (
 		<ReactIconsContext.Consumer>
 			{(icons) => {
@@ -36,10 +34,8 @@ export const SocialIcon: React.FC<SocialIconProps> = (props) => {
 					(networkKey && icons[networkKey]) || icons.default;
 
 				return (
-					<Component
+					<Link
 						href={url}
-						target="_blank"
-						rel="noopener noreferrer"
 						style={{ ...socialIcon({ size, height, width }), ...style }}
 						aria-label={label || networkKey}
 						{...rest}
@@ -50,7 +46,7 @@ export const SocialIcon: React.FC<SocialIconProps> = (props) => {
 								<Mask mask={mask} bgColor={bgColor || color} />
 							</svg>
 						</Box>
-					</Component>
+					</Link>
 				);
 			}}
 		</ReactIconsContext.Consumer>
