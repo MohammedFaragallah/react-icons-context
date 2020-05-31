@@ -9,11 +9,11 @@ import {
 } from 'react-icons-context';
 
 const mySocials: SocialIconProps[] = [
-	{ url: 'https://github.com/MohammedFaragallah', bgColor: '#333' },
-	{ url: 'https://twitter.com/ffragalla' },
-	{ url: 'https://facebook.com/MohammedAliFaragallah' },
-	{ url: 'https://instagram.com/mohammedalifaragallah', bgColor: '#E1306C' },
-	{ url: 'mailto:ffragalla@gmail.com', network: 'mailTo', bgColor: '#dd4b39' },
+	{ href: 'https://github.com/MohammedFaragallah', bgColor: '#333' },
+	{ href: 'https://twitter.com/ffragalla' },
+	{ href: 'https://facebook.com/MohammedAliFaragallah' },
+	{ href: 'https://instagram.com/mohammedalifaragallah', bgColor: '#E1306C' },
+	{ href: 'mailto:ffragalla@gmail.com', network: 'mailTo', bgColor: '#dd4b39' },
 	{
 		network: 'shareThis',
 		fgColor: '#d7d8d9',

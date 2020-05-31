@@ -1,13 +1,13 @@
 import { CSSProperties } from 'react';
 
 import { ICON_DEFAULT_SIZE } from './defaults';
-import { Options } from './types';
+import { SocialIconStyleProps } from './types';
 
 export const socialIcon = ({
 	size = ICON_DEFAULT_SIZE,
 	height = size,
 	width = size,
-}: Options): CSSProperties => ({
+}: SocialIconStyleProps): CSSProperties => ({
 	display: 'inline-block',
 	width,
 	height,

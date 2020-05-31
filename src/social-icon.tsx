@@ -13,11 +13,10 @@ import { keyFor } from './utils';
 
 export const SocialIcon: React.FC<SocialIconProps> = (props) => {
 	const {
-		url,
+		href,
 		network,
 		bgColor,
 		fgColor,
-		label,
 		style,
 		size,
 		height,
@@ -25,7 +24,7 @@ export const SocialIcon: React.FC<SocialIconProps> = (props) => {
 		...rest
 	} = props;
 
-	const networkKey = network || (url ? keyFor(url) : DEFAULT_KEY);
+	const networkKey = network || (href ? keyFor(href) : DEFAULT_KEY);
 
 	return (
 		<ReactIconsConsumer>
@@ -35,9 +34,8 @@ export const SocialIcon: React.FC<SocialIconProps> = (props) => {
 
 				return (
 					<Link
-						href={url}
+						href={href}
 						style={{ ...socialIcon({ size, height, width }), ...style }}
-						aria-label={label || networkKey}
 						{...rest}
 					>
 						<Box style={socialContainer}>

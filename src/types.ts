@@ -17,18 +17,14 @@ export interface Icons {
 
 export type SquareSize = CSSProperties['width'] | CSSProperties['height'];
 
-export interface Options {
+export interface SocialIconStyleProps {
 	size?: SquareSize;
 	height?: CSSProperties['height'];
 	width?: CSSProperties['width'];
 }
 
-export interface SocialIconProps extends Options, LinkProps {
+export interface SocialIconProps extends SocialIconStyleProps, LinkProps {
 	bgColor?: Color;
 	fgColor?: Color;
-	label?: string;
 	network?: string;
-	url?: string;
-	className?: string;
-	style?: CSSProperties;
 }
