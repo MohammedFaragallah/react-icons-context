@@ -3,7 +3,7 @@ import Link from '@material-ui/core/Link';
 import React from 'react';
 
 import { Background } from './background';
-import { ReactIconsContext } from './context';
+import { ReactIconsConsumer } from './context';
 import { DEFAULT_KEY } from './defaults';
 import { Icon } from './icon';
 import { Mask } from './mask';
@@ -28,7 +28,7 @@ export const SocialIcon: React.FC<SocialIconProps> = (props) => {
 	const networkKey = network || (url ? keyFor(url) : DEFAULT_KEY);
 
 	return (
-		<ReactIconsContext.Consumer>
+		<ReactIconsConsumer>
 			{(icons) => {
 				const { icon, mask, color } =
 					(networkKey && icons[networkKey]) || icons.default;
@@ -49,6 +49,6 @@ export const SocialIcon: React.FC<SocialIconProps> = (props) => {
 					</Link>
 				);
 			}}
-		</ReactIconsContext.Consumer>
+		</ReactIconsConsumer>
 	);
 };
