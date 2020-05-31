@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Box, CssBaseline } from '@material-ui/core';
 import {
-	ReactIconsContext,
+	ReactIconsProvider,
 	defaultIcons,
 	SocialIcon,
 	SocialIconProps,
@@ -28,7 +28,7 @@ const mySocials: SocialIconProps[] = [
 
 const App = () => {
 	return (
-		<ReactIconsContext.Provider value={defaultIcons}>
+		<ReactIconsProvider value={defaultIcons}>
 			<CssBaseline />
 			<Box
 				width={'100vw'}
@@ -43,7 +43,7 @@ const App = () => {
 					</Box>
 				))}
 			</Box>
-		</ReactIconsContext.Provider>
+		</ReactIconsProvider>
 	);
 };
 

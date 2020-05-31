@@ -21,17 +21,17 @@ yarn install react-icons-context
 import React from 'react';
 
 import {
-	ReactIconsContext,
+	ReactIconsProvider,
 	defaultIcons,
 	SocialIcon,
 } from 'react-icons-context';
 
 const App = () => {
 	return (
-		<ReactIconsContext.Provider value={defaultIcons}>
+		<ReactIconsProvider value={defaultIcons}>
 			<SocialIcon network="facebook" />
 			<SocialIcon url="https://github.com/MohammedFaragallah" />
-		</ReactIconsContext.Provider>
+		</ReactIconsProvider>
 	);
 };
 ```
