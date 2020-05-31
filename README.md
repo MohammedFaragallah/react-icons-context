@@ -35,6 +35,11 @@ const App = () => {
 	);
 };
 ```
+## TODO
+- [ ] tree shaking support
+- [ ] more default icons
+- [ ] remove material-ui dependency (maybe)
+
 
 ## License
 
