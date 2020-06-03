@@ -6,6 +6,4 @@ export const defaultIcon = {
 	color: '#7f7f7f',
 };
 
-export const DEFAULT_KEY = 'shareThis';
-
 export const ICON_DEFAULT_SIZE = 33;

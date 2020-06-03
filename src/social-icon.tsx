@@ -4,7 +4,6 @@ import React from 'react';
 
 import { Background } from './background';
 import { ReactIconsConsumer } from './context';
-import { DEFAULT_KEY } from './defaults';
 import { Icon } from './icon';
 import { Mask } from './mask';
 import { socialContainer, socialIcon, socialSvg } from './styles';
@@ -24,7 +23,7 @@ export const SocialIcon: React.FC<SocialIconProps> = (props) => {
 		...rest
 	} = props;
 
-	const networkKey = network || (href ? keyFor(href) : DEFAULT_KEY);
+	const networkKey = network || (href && keyFor(href));
 
 	return (
 		<ReactIconsConsumer>
