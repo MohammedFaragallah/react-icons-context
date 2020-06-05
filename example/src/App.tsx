@@ -1,12 +1,25 @@
-import React from 'react';
-
 import { Box, CssBaseline } from '@material-ui/core';
+import React from 'react';
 import {
-	ReactIconsProvider,
 	defaultIcons,
+	ICON_DEFAULT_SIZE,
+	ReactIconsProvider,
 	SocialIcon,
 	SocialIconProps,
 } from 'react-icons-context';
+import { makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => {
+	const { transitions } = theme;
+	return {
+		root: {
+			transition: transitions.create('all', { duration: 500 }),
+			'&:hover': {
+				transform: 'scale(1.1)',
+			},
+		},
+	};
+});
 
 const mySocials: SocialIconProps[] = [
 	{ href: 'https://github.com/MohammedFaragallah', bgColor: '#333' },
@@ -15,9 +28,11 @@ const mySocials: SocialIconProps[] = [
 	{ href: 'https://instagram.com/mohammedalifaragallah', bgColor: '#E1306C' },
 	{ href: 'mailto:ffragalla@gmail.com', network: 'mailTo', bgColor: '#dd4b39' },
 	{
-		network: 'shareThis',
+		network: 'share',
 		fgColor: '#d7d8d9',
 		bgColor: 'tomato',
+		height: 120,
+		width: 80,
 		onClick: () =>
 			window.open(
 				'https://github.com/MohammedFaragallah/react-icons-context',
@@ -27,21 +42,52 @@ const mySocials: SocialIconProps[] = [
 ];
 
 const App = () => {
+	const classes = useStyles();
+
 	return (
 		<ReactIconsProvider value={defaultIcons}>
 			<CssBaseline />
 			<Box
-				width={'100vw'}
-				height={'100vh'}
-				display={'flex'}
-				justifyContent={'center'}
-				alignItems={'center'}
+				width="100vw"
+				height="100vh"
+				display="flex"
+				justifyContent="center"
+				alignItems="center"
+				flexDirection="column"
 			>
-				{mySocials.map((network) => (
-					<Box mr={2} key={JSON.stringify(network)}>
-						<SocialIcon {...network} />
-					</Box>
-				))}
+				<Box display="flex" mb={4}>
+					{mySocials.map((network, index) => {
+						const props = {
+							target: '_blank',
+							size: ICON_DEFAULT_SIZE + (mySocials.length - index) * 10,
+							radius: (mySocials.length - index) * 8,
+							...network,
+						};
+
+						return (
+							<Box mr={2} key={JSON.stringify(network)}>
+								<SocialIcon
+									title={JSON.stringify(props, undefined, 2)}
+									classes={classes}
+									{...props}
+								/>
+							</Box>
+						);
+					})}
+				</Box>
+				<Box display="flex" flexWrap="wrap">
+					{Object.keys(defaultIcons).map((network) => (
+						<Box
+							key={network}
+							mr={2}
+							display="flex"
+							flexDirection="column"
+							alignItems="center"
+						>
+							<SocialIcon network={network} title={network} />
+						</Box>
+					))}
+				</Box>
 			</Box>
 		</ReactIconsProvider>
 	);

@@ -1,9 +1,9 @@
 import { createContext } from 'react';
 
-import { defaultIcon } from './defaults';
+import { defaultIcons } from './defaultIcons';
 import { Icons } from './types';
 
-export const ReactIconsContext = createContext<Icons>({ default: defaultIcon });
+export const ReactIconsContext = createContext<Icons>(defaultIcons);
 
 export const {
 	Provider: ReactIconsProvider,

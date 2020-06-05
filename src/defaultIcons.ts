@@ -1,19 +1,18 @@
-import { defaultIcon } from './defaults';
 import { email } from './icons/email';
 import { facebook } from './icons/facebook';
 import { github } from './icons/github';
 import { google } from './icons/google';
 import { instagram } from './icons/instagram';
-import { shareThis } from './icons/shareThis';
+import { share } from './icons/share';
 import { twitter } from './icons/twitter';
 import { whatsapp } from './icons/whatsapp';
 import { youtube } from './icons/youtube';
 
 export const defaultIcons = {
-	default: defaultIcon,
+	default: share,
 	mailto: email,
 	email,
-	shareThis,
+	share,
 	facebook,
 	github,
 	instagram,
