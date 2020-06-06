@@ -9,9 +9,16 @@ interface Props extends SocialIconProps {
 }
 
 export const SocialIcon: FC<Props> = (props) => {
+	const { radius, variant, bgColor, fgColor, ...rest } = props;
+
 	return (
-		<Link {...props}>
-			<Icon {...props} />
+		<Link {...rest}>
+			<Icon
+				radius={radius}
+				variant={variant}
+				bgColor={bgColor}
+				fgColor={fgColor}
+			/>
 		</Link>
 	);
 };

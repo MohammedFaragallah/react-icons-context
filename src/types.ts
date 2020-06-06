@@ -38,4 +38,4 @@ export interface SocialIconLinkProps extends Omit<LinkProps, keyof IconProps> {
 
 export interface SocialIconProps
 	extends SocialIconLinkProps,
-		Partial<IconProps> {}
+		Partial<Omit<IconProps, keyof SvgIcon>> {}
