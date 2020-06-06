@@ -1,8 +1,8 @@
 import { Link as MuiLink, makeStyles, Theme } from '@material-ui/core';
-import React, { Children, cloneElement, ReactElement, FC } from 'react';
+import React, { Children, cloneElement, FC, isValidElement } from 'react';
 
 import { ReactIconsConsumer } from './context';
-import { SocialIconLinkProps, IconProps, ClassesOverride } from './types';
+import { ClassesOverride, IconProps, SocialIconLinkProps } from './types';
 import { keyFor } from './utils';
 
 export const ICON_DEFAULT_SIZE = 33;
@@ -37,9 +37,13 @@ export const Link: FC<Props> = (props) => {
 
 				return (
 					<MuiLink href={href} className={classes.root} {...rest}>
-						{Children.map(children, (child: ReactElement<IconProps>) =>
-							cloneElement(child, icon),
-						)}
+						{Children.map(children, (child) => {
+							if (!isValidElement<IconProps>(child)) {
+								return child;
+							}
+
+							return cloneElement(child, icon);
+						})}
 					</MuiLink>
 				);
 			}}
