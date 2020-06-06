@@ -9,10 +9,10 @@ fork from [react-social-icons](https://github.com/jaketrent/react-social-icons)
 ## Install
 
 ```bash
-npm install --save react-icons-context
+npm install --save react-icons-context @material-ui/core
 ```
 ```bash
-yarn install react-icons-context
+yarn add react-icons-context @material-ui/core
 ```
 
 ## Usage
