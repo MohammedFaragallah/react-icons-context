@@ -8,6 +8,7 @@ import {
 	SocialIconProps,
 } from 'react-icons-context';
 import { makeStyles } from '@material-ui/core';
+import { TitleProps } from 'TitleProps';
 
 const useStyles = makeStyles((theme) => {
 	const { transitions } = theme;
@@ -66,11 +67,9 @@ const App = () => {
 
 						return (
 							<Box mr={2} key={JSON.stringify(network)}>
-								<SocialIcon
-									title={JSON.stringify(props, undefined, 2)}
-									classes={classes}
-									{...props}
-								/>
+								<TitleProps props={props} condition>
+									<SocialIcon classes={classes} {...props} />
+								</TitleProps>
 							</Box>
 						);
 					})}
