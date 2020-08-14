@@ -1,5 +1,5 @@
-import { CSSProperties, SVGAttributes } from 'react';
 import { LinkProps } from '@material-ui/core';
+import { CSSProperties, SVGAttributes } from 'react';
 
 export type ClassesOverride<
 	UseStyles extends (props: any) => Record<string, string>

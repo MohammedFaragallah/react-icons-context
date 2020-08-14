@@ -1,5 +1,6 @@
 import { makeStyles, Theme } from '@material-ui/core';
 import React, { FC } from 'react';
+
 import { ClassesOverride, IconProps } from './types';
 
 const useStyles = makeStyles<Theme, Partial<IconProps>>((theme) => {
