@@ -23,12 +23,8 @@
 		"test:build": "run-s build",
 		"test:lint": "eslint .",
 		"test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
-		"test:watch": "react-scripts test --env=jsdom"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
+		"test:watch": "react-scripts test --env=jsdom",
+		"prepare": "husky install"
 	},
 	"lint-staged": {
 		"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
@@ -65,8 +61,7 @@
 		"eslint-plugin-react": "^7.22.0",
 		"eslint-plugin-standard": "^5.0.0",
 		"gh-pages": "^3.1.0",
-		"husky": "^4.3.6",
-		"lint-staged": "^10.5.3",
+		"husky": "^5.2.0",
 		"microbundle-crl": "^0.13.11",
 		"npm-run-all": "^4.1.5",
 		"prettier": "^2.2.1",
