@@ -1,28 +1,29 @@
 {
-  "name": "react-icons-context-example",
-  "version": "0.0.0",
-  "private": true,
-  "homepage": "https://MohammedFaragallah.github.io/react-icons-context",
-  "scripts": {
-    "build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
-    "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject",
-    "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
-    "test": "node ../node_modules/react-scripts/bin/react-scripts.js test"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "dependencies": {
-    "@material-ui/core": "link:../node_modules/@material-ui/core",
-    "react": "link:../node_modules/react",
-    "react-dom": "link:../node_modules/react-dom",
-    "react-icons-context": "link:..",
-    "react-scripts": "link:../node_modules/react-scripts"
-  }
+	"name": "react-icons-context-example",
+	"version": "0.0.0",
+	"private": true,
+	"homepage": "https://MohammedFaragallah.github.io/react-icons-context",
+	"scripts": {
+		"build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
+		"eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject",
+		"start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
+		"test": "node ../node_modules/react-scripts/bin/react-scripts.js test"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	],
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"dependencies": {
+		"@material-ui/core": "link:../node_modules/@material-ui/core",
+		"@material-ui/styles": "link:../node_modules/@material-ui/styles",
+		"react": "link:../node_modules/react",
+		"react-dom": "link:../node_modules/react-dom",
+		"react-icons-context": "link:..",
+		"react-scripts": "link:../node_modules/react-scripts"
+	}
 }

@@ -7,11 +7,12 @@ import {
 	SocialIcon,
 	SocialIconProps,
 } from 'react-icons-context';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
 import { TitleProps } from 'TitleProps';
 
 const useStyles = makeStyles((theme) => {
 	const { transitions } = theme;
+
 	return {
 		root: {
 			transition: transitions.create('all', { duration: 500 }),
@@ -42,7 +43,9 @@ const mySocials: SocialIconProps[] = [
 	},
 ];
 
-const App = () => {
+export interface AppProps {}
+
+export const App: React.FC<AppProps> = () => {
 	const classes = useStyles();
 
 	return (
@@ -91,5 +94,3 @@ const App = () => {
 		</ReactIconsProvider>
 	);
 };
-
-export default App;

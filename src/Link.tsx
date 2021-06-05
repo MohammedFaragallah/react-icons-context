@@ -1,5 +1,6 @@
-import { Link as MuiLink, makeStyles, Theme } from '@material-ui/core';
+import { Link as MuiLink, Theme } from '@material-ui/core';
 import React, { Children, cloneElement, FC, isValidElement } from 'react';
+import { makeStyles } from '@material-ui/styles';
 
 import { ReactIconsConsumer } from './context';
 import { ClassesOverride, IconProps, SocialIconLinkProps } from './types';
