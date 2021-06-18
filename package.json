@@ -38,12 +38,12 @@
 		}
 	},
 	"devDependencies": {
-		"@material-ui/core": "^5.0.0-alpha.35",
+		"@material-ui/core": "^5.0.0-alpha.37",
 		"@types/jest": "^26.0.23",
-		"@types/react": "^17.0.9",
-		"@types/react-dom": "^17.0.6",
-		"@typescript-eslint/eslint-plugin": "^4.26.0",
-		"@typescript-eslint/parser": "^4.26.0",
+		"@types/react": "^17.0.11",
+		"@types/react-dom": "^17.0.8",
+		"@typescript-eslint/eslint-plugin": "^4.27.0",
+		"@typescript-eslint/parser": "^4.27.0",
 		"babel-eslint": "^10.1.0",
 		"cross-env": "^7.0.3",
 		"cz-conventional-changelog": "3.3.0",
@@ -60,7 +60,7 @@
 		"eslint-plugin-promise": "^5.1.0",
 		"eslint-plugin-react": "^7.24.0",
 		"eslint-plugin-standard": "^5.0.0",
-		"gh-pages": "^3.2.0",
+		"gh-pages": "^3.2.2",
 		"husky": "^5.2.0",
 		"lint-staged": "^11.0.0",
 		"microbundle-crl": "^0.13.11",
@@ -69,10 +69,10 @@
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-scripts": "4.0.3",
-		"release-it": "^14.7.0"
+		"release-it": "^14.9.0"
 	},
 	"peerDependencies": {
-		"@material-ui/core": "5.0.0-alpha.35",
+		"@material-ui/core": "5.0.0-alpha.37",
 		"react": "^17.0.2"
 	},
 	"engines": {
@@ -81,6 +81,7 @@
 	"dependencies": {
 		"@emotion/react": "^11.4.0",
 		"@emotion/styled": "^11.3.0",
-		"@material-ui/styles": "^5.0.0-alpha.35"
+		"@material-ui/styles": "^5.0.0-alpha.35",
+		"styled-components": "^5.3.0"
 	}
 }
